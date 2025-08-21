@@ -227,7 +227,7 @@ const CalendarPage: React.FC = () => {
                   return (
                     <div
                       key={day.toISOString()}
-                      className={`min-h-[120px] border-b border-r border-gray-200 p-2 cursor-pointer hover:bg-red-50 transition-colors duration-200 ${
+                      className={`min-h-[140px] border-b border-r border-gray-200 p-2 cursor-pointer hover:bg-red-50 transition-colors duration-200 ${
                         !isCurrentMonth ? 'bg-gray-50 text-gray-400' : ''
                       } ${isSelected ? 'bg-red-100' : ''}`}
                       onClick={() => setSelectedDate(day)}
@@ -254,7 +254,7 @@ const CalendarPage: React.FC = () => {
                         {dayEvents.slice(0, 2).map((event) => (
                           <div
                             key={event.id}
-                            className={`text-xs text-white px-2 py-1 rounded truncate flex items-center cursor-pointer hover:opacity-80 transition-opacity duration-200 ${event.type.color}`}
+                            className={`text-xs text-white px-1 py-1 rounded flex items-center cursor-pointer hover:opacity-80 transition-opacity duration-200 ${event.type.color} leading-tight`}
                             onClick={(e) => {
                               e.stopPropagation();
                               handleEventClick(event);
@@ -271,11 +271,13 @@ const CalendarPage: React.FC = () => {
                             aria-label={`View details for ${event.title}`}
                           >
                             <span className="mr-1">{event.type.icon}</span>
-                            <span className="truncate">{event.title}</span>
+                            <span className="flex-1 break-words text-wrap leading-tight" style={{ fontSize: '10px' }}>
+                              {event.title.length > 25 ? `${event.title.substring(0, 25)}...` : event.title}
+                            </span>
                           </div>
                         ))}
                         {dayEvents.length > 2 && (
-                          <div className="text-xs text-gray-500">
+                          <div className="text-xs text-gray-500 font-medium">
                             +{dayEvents.length - 2} more
                           </div>
                         )}
