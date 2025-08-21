@@ -227,7 +227,7 @@ const CalendarPage: React.FC = () => {
                   return (
                     <div
                       key={day.toISOString()}
-                      className={`min-h-[140px] border-b border-r border-gray-200 p-2 cursor-pointer hover:bg-red-50 transition-colors duration-200 ${
+                      className={`min-h-[160px] border-b border-r border-gray-200 p-2 cursor-pointer hover:bg-red-50 transition-colors duration-200 ${
                         !isCurrentMonth ? 'bg-gray-50 text-gray-400' : ''
                       } ${isSelected ? 'bg-red-100' : ''}`}
                       onClick={() => setSelectedDate(day)}
@@ -250,11 +250,11 @@ const CalendarPage: React.FC = () => {
                           </span>
                         )}
                       </div>
-                      <div className="space-y-1">
-                        {dayEvents.slice(0, 2).map((event) => (
+                      <div className="space-y-1 overflow-y-auto max-h-[120px]">
+                        {dayEvents.map((event) => (
                           <div
                             key={event.id}
-                            className={`text-xs text-white px-2 py-1 rounded cursor-pointer hover:opacity-80 transition-opacity duration-200 ${event.type.color}`}
+                            className={`text-xs text-white px-1 py-1 rounded cursor-pointer hover:opacity-80 transition-opacity duration-200 ${event.type.color} mb-1`}
                             onClick={(e) => {
                               e.stopPropagation();
                               handleEventClick(event);
@@ -270,19 +270,14 @@ const CalendarPage: React.FC = () => {
                             }}
                             aria-label={`View details for ${event.title}`}
                           >
-                            <div className="flex items-start space-x-1">
-                              <span className="text-sm flex-shrink-0">{event.type.icon}</span>
-                              <span className="text-xs leading-tight break-words">
-                                {event.title.length > 20 ? `${event.title.substring(0, 20)}...` : event.title}
+                            <div className="flex items-center space-x-1">
+                              <span className="text-xs flex-shrink-0">{event.type.icon}</span>
+                              <span className="text-xs leading-tight break-words flex-1">
+                                {event.title}
                               </span>
                             </div>
                           </div>
                         ))}
-                        {dayEvents.length > 2 && (
-                          <div className="text-xs text-gray-500 font-medium">
-                            +{dayEvents.length - 2} more
-                          </div>
-                        )}
                       </div>
                     </div>
                   );
