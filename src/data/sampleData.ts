@@ -89,7 +89,7 @@ export const events: Event[] = [
   {
     id: '1',
     title: 'Argentine Tango Masterclass',
-    date: new Date(2025, 0, 15),
+    date: new Date(2025, 0, 15), // January 15, 2025
     time: '7:00 PM',
     venue: 'Grand Ballroom',
     areaId: 'downtown',
@@ -100,7 +100,7 @@ export const events: Event[] = [
   {
     id: '2',
     title: 'Milonga La Noche',
-    date: new Date(2025, 0, 18),
+    date: new Date(2025, 0, 18), // January 18, 2025
     time: '8:30 PM',
     venue: 'Crystal Dance Hall',
     areaId: 'downtown',
@@ -111,7 +111,7 @@ export const events: Event[] = [
   {
     id: '3',
     title: 'Beginner Tango Workshop',
-    date: new Date(2025, 0, 22),
+    date: new Date(2025, 0, 22), // January 22, 2025
     time: '6:00 PM',
     venue: 'Studio Central',
     areaId: 'downtown',
@@ -124,7 +124,7 @@ export const events: Event[] = [
   {
     id: '4',
     title: 'Sunset Tango by the River',
-    date: new Date(2025, 0, 16),
+    date: new Date(2025, 0, 16), // January 16, 2025
     time: '6:30 PM',
     venue: 'Riverside Pavilion',
     areaId: 'riverside',
@@ -135,7 +135,7 @@ export const events: Event[] = [
   {
     id: '5',
     title: 'Outdoor Milonga',
-    date: new Date(2025, 0, 25),
+    date: new Date(2025, 0, 25), // January 25, 2025
     time: '7:00 PM',
     venue: 'Waterfront Gardens',
     areaId: 'riverside',
@@ -148,7 +148,7 @@ export const events: Event[] = [
   {
     id: '6',
     title: 'Tango & Wine Evening',
-    date: new Date(2025, 0, 14),
+    date: new Date(2025, 0, 14), // January 14, 2025
     time: '7:30 PM',
     venue: 'Gallery Moderne',
     areaId: 'arts-district',
@@ -159,7 +159,7 @@ export const events: Event[] = [
   {
     id: '7',
     title: 'Contemporary Tango Fusion',
-    date: new Date(2025, 0, 21),
+    date: new Date(2025, 0, 21), // January 21, 2025
     time: '8:00 PM',
     venue: 'Creative Space Studio',
     areaId: 'arts-district',
@@ -170,7 +170,7 @@ export const events: Event[] = [
   {
     id: '8',
     title: 'Cultural Center Milonga',
-    date: new Date(2025, 0, 28),
+    date: new Date(2025, 0, 28), // January 28, 2025
     time: '7:45 PM',
     venue: 'Arts Cultural Center',
     areaId: 'arts-district',
@@ -183,7 +183,7 @@ export const events: Event[] = [
   {
     id: '9',
     title: 'Neighborhood Social Dance',
-    date: new Date(2025, 0, 17),
+    date: new Date(2025, 0, 17), // January 17, 2025
     time: '7:00 PM',
     venue: 'Village Community Hall',
     areaId: 'uptown',
@@ -194,7 +194,7 @@ export const events: Event[] = [
   {
     id: '10',
     title: 'Tango Technique Class',
-    date: new Date(2025, 0, 24),
+    date: new Date(2025, 0, 24), // January 24, 2025
     time: '6:30 PM',
     venue: 'Uptown Dance Studio',
     areaId: 'uptown',
@@ -207,7 +207,7 @@ export const events: Event[] = [
   {
     id: '11',
     title: 'Family Tango Workshop',
-    date: new Date(2025, 0, 19),
+    date: new Date(2025, 0, 19), // January 19, 2025
     time: '4:00 PM',
     venue: 'Suburban Dance Center',
     areaId: 'suburbs',
@@ -218,7 +218,7 @@ export const events: Event[] = [
   {
     id: '12',
     title: 'Weekend Intensive',
-    date: new Date(2025, 0, 26),
+    date: new Date(2025, 0, 26), // January 26, 2025
     time: '10:00 AM',
     venue: 'Peaceful Studios',
     areaId: 'suburbs',
@@ -231,7 +231,7 @@ export const events: Event[] = [
   {
     id: '13',
     title: 'Vintage Tango Ball',
-    date: new Date(2025, 0, 20),
+    date: new Date(2025, 0, 20), // January 20, 2025
     time: '8:00 PM',
     venue: 'Heritage Mansion',
     areaId: 'historic',
@@ -242,7 +242,7 @@ export const events: Event[] = [
   {
     id: '14',
     title: 'Traditional Milonga',
-    date: new Date(2025, 0, 27),
+    date: new Date(2025, 0, 27), // January 27, 2025
     time: '7:30 PM',
     venue: 'Historic Opera House',
     areaId: 'historic',
