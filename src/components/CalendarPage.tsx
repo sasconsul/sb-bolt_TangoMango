@@ -254,7 +254,7 @@ const CalendarPage: React.FC = () => {
                         {dayEvents.slice(0, 2).map((event) => (
                           <div
                             key={event.id}
-                            className={`text-xs text-white px-1 py-1 rounded flex items-center cursor-pointer hover:opacity-80 transition-opacity duration-200 ${event.type.color} leading-tight`}
+                            className={`text-xs text-white px-2 py-1 rounded cursor-pointer hover:opacity-80 transition-opacity duration-200 ${event.type.color}`}
                             onClick={(e) => {
                               e.stopPropagation();
                               handleEventClick(event);
@@ -270,10 +270,12 @@ const CalendarPage: React.FC = () => {
                             }}
                             aria-label={`View details for ${event.title}`}
                           >
-                            <span className="mr-1">{event.type.icon}</span>
-                            <span className="flex-1 break-words text-wrap leading-tight" style={{ fontSize: '10px' }}>
-                              {event.title.length > 25 ? `${event.title.substring(0, 25)}...` : event.title}
-                            </span>
+                            <div className="flex items-start space-x-1">
+                              <span className="text-sm flex-shrink-0">{event.type.icon}</span>
+                              <span className="text-xs leading-tight break-words">
+                                {event.title.length > 20 ? `${event.title.substring(0, 20)}...` : event.title}
+                              </span>
+                            </div>
                           </div>
                         ))}
                         {dayEvents.length > 2 && (
