@@ -32,7 +32,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-5xl font-bold text-gray-900 mb-6">
             Discover Tango Events
-            <span className="block text-red-600">Across the City</span>
+            <span className="block text-red-600">Across the Nation</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Explore vibrant tango communities in different neighborhoods. 
