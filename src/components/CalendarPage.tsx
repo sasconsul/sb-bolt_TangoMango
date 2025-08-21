@@ -8,7 +8,7 @@ import EventModal from './EventModal';
 
 const CalendarPage: React.FC = () => {
   const [searchParams] = useSearchParams();
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDate, setCurrentDate] = useState(new Date(2025, 0, 1)); // January 2025
   const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
